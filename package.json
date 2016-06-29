@@ -4,9 +4,9 @@
   "description": "Baseline project for Cycle.js using Typescript",
   "main": "index.js",
   "scripts": {
-    "browserify": "browserify src/index.tsx -p tsify -o public/index.js",
-    "watchify": "watchify src/index.tsx -v -p tsify -o public/index.js",
-    "budo": "budo src/index.tsx:index.js --dir assets --live -- -p tsify",
+    "browserify": "browserify src/index.ts -p tsify -o public/index.js",
+    "watchify": "watchify src/index.ts -v -p tsify -o public/index.js",
+    "budo": "budo src/index.ts:index.js --dir assets --live -- -p tsify",
     "assets": "bash -c \"mkdir -p public && cp -r assets/* public\"",
     "server": "http-server public",
     "clean": "bash -c \"[ -d public ] && rm -r public\"",
