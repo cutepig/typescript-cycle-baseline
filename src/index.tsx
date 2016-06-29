@@ -1,16 +1,13 @@
-/// <reference path="../custom-typings/@cycle/dom.d.ts" />
-
-import {Observable} from 'rxjs';
-import {run} from '@cycle/rxjs-run';
-import {makeDOMDriver} from '@cycle/dom';
-import React from './h';
+import xs from 'xstream';
+import {run} from '@cycle/xstream-run';
+import {makeDOMDriver, h} from '@cycle/dom';
 
 const App = () => ({
-  DOM: Observable.of(
-    <div className="app">
-      <h1>Enter the lairs</h1>
-      <p>Lorem ipsum</p>
-    </div>
+  DOM: xs.of(
+    h('div.app', [
+      h('h1', 'Enter the lairs'),
+      h('p', 'Lorem ipsum')
+    ])
   )
 });
 
